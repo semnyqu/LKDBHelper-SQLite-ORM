@@ -369,7 +369,7 @@ static BOOL LKDBNullIsEmptyString = NO;
     LKDBHelper *helper = self;
 
     [self executeDB:^(FMDatabase *db) {
-        BOOL inTransacttion = db.isInTransaction;
+        BOOL inTransacttion = db.inTransaction;
 
         if (!inTransacttion) {
             [db beginTransaction];
